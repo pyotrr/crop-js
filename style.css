@@ -1,0 +1,72 @@
+body {
+    width: 100vw;
+}
+
+body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#pictureCropper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#photoCanvas {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#cropElement {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    outline: 500px solid rgba(0, 0, 0, 0.5);
+    cursor: move;
+    border: 1px dashed lightgrey;
+}
+.hidden {
+    display: none;
+}
+
+.point {
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    background-clip: content-box;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    cursor: nwse-resize;
+}
+.top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    cursor: nesw-resize;
+}
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    cursor: nesw-resize;
+}
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    cursor: nwse-resize;
+}

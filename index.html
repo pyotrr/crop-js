@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop</title>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <input type="file" id="fileInput" />
+    <div id="pictureCropper">
+      <canvas id="photoCanvas"></canvas>
+      <div id="cropElement" class="hidden">
+        <div class="point top-left" id="tl"></div>
+        <div class="point top-right" id="tr"></div>
+        <div class="point bottom-left" id="bl"></div>
+        <div class="point bottom-right" id="br"></div>
+      </div>
+    </div>
+    <button type="button" id="downloadCropped">Crop</button>
+  </div>
+</body>
+</html>
